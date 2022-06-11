@@ -5,9 +5,9 @@
     </div>
     <div class="card-body">
       <h5 class="card-title">Naslov: {{  article.title }}</h5>
-      <p class="card-text fifty-chars" >{{ article.text }}</p>
+      <p class="card-text fifty-chars" >Tekst: {{ article.text }}</p>
       <p class="card-text">Datum objave: {{ new Date(article.date).toLocaleDateString('en-US') }}</p>
-      <a href="#" class="btn btn-primary">Procitaj</a>
+      <router-link :to="{ name: 'single-article', params: { id: article.id }}">Procitaj</router-link>
     </div>
   </div>
 </template>

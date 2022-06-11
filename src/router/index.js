@@ -20,6 +20,16 @@ const routes = [
     name: 'NewsByCategories',
     component: () => import(/* webpackChunkName: "about" */ '../views/Categories')
   },
+  {
+    path: '/articles/:id',
+    name: 'single-article',
+    component: () => import(/* webpackChunkName: "about" */ '../views/SingleArticle')
+  },
+  {
+    path: '/articles/:tag',
+    name: 'articlesByTag',
+    component: () => import(/* webpackChunkName: "about" */ '../views/ArticlesByTag')
+  }
 ]
 
 const router = new VueRouter({
